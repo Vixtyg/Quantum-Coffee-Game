@@ -1,6 +1,11 @@
 extends CharacterBody2D
 
 
+enum STATE {
+	IDLE,
+	FOLLOW
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("Hello World")

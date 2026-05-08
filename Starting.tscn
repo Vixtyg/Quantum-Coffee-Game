@@ -7,6 +7,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hcpfl"]
 size = Vector2(129, 127)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isd15"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_isd15"]
+
 [node name="Node2D" type="Node2D" unique_id=1047297409]
 
 [node name="MainCharacter" type="CharacterBody2D" parent="." unique_id=115279428]
@@ -25,3 +29,17 @@ metadata/_edit_group_ = true
 
 [node name="enemy" type="CharacterBody2D" parent="." unique_id=1249428094]
 script = ExtResource("3_isd15")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=104859318]
+shape = SubResource("RectangleShape2D_isd15")
+
+[node name="Sprite2D" type="Sprite2D" parent="enemy" unique_id=1088223933]
+position = Vector2(832, 491)
+scale = Vector2(0.5199951, 1)
+texture = ExtResource("2_isd15")
+
+[node name="BasePlatform" type="StaticBody2D" parent="." unique_id=513957404]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasePlatform" unique_id=27581963]
+position = Vector2(555, 612)
+shape = SubResource("WorldBoundaryShape2D_isd15")
