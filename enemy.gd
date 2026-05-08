@@ -9,6 +9,8 @@ enum STATE {
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("Hello World")
+	
+	print("Hello World from me!")
 	pass # Replace with function body.
 
 
