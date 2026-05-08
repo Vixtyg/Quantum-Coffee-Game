@@ -11,12 +11,13 @@ size = Vector2(129, 127)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_isd15"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwgbj"]
+
 [node name="Node2D" type="Node2D" unique_id=1047297409]
 
 [node name="MainCharacter" type="CharacterBody2D" parent="." unique_id=115279428]
 position = Vector2(59, 39)
 script = ExtResource("1_kx6a3")
-metadata/_edit_group_ = true
 
 [node name="Icon" type="Sprite2D" parent="MainCharacter" unique_id=386906196]
 texture = ExtResource("2_isd15")
@@ -28,13 +29,16 @@ shape = SubResource("RectangleShape2D_hcpfl")
 metadata/_edit_group_ = true
 
 [node name="enemy" type="CharacterBody2D" parent="." unique_id=1249428094]
+position = Vector2(733, 473)
 script = ExtResource("3_isd15")
+
+[node name="ray" type="RayCast2D" parent="enemy" unique_id=857684076]
+target_position = Vector2(135, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=104859318]
 shape = SubResource("RectangleShape2D_isd15")
 
-[node name="Sprite2D" type="Sprite2D" parent="enemy" unique_id=1088223933]
-position = Vector2(832, 491)
+[node name="sprite" type="Sprite2D" parent="enemy" unique_id=1088223933]
 scale = Vector2(0.5199951, 1)
 texture = ExtResource("2_isd15")
 
@@ -43,3 +47,21 @@ texture = ExtResource("2_isd15")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BasePlatform" unique_id=27581963]
 position = Vector2(555, 612)
 shape = SubResource("WorldBoundaryShape2D_isd15")
+
+[node name="obstacle" type="StaticBody2D" parent="." unique_id=2071078831]
+position = Vector2(506, 506)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstacle" unique_id=252042984]
+shape = SubResource("RectangleShape2D_hwgbj")
+
+[node name="Sprite2D" type="Sprite2D" parent="obstacle" unique_id=1121819442]
+texture = ExtResource("2_isd15")
+
+[node name="obstacle2" type="StaticBody2D" parent="." unique_id=1121526077]
+position = Vector2(992, 514)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstacle2" unique_id=1697661222]
+shape = SubResource("RectangleShape2D_hwgbj")
+
+[node name="Sprite2D" type="Sprite2D" parent="obstacle2" unique_id=971772745]
+texture = ExtResource("2_isd15")
