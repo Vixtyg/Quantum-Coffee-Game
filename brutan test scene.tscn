@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dqk0pcxj7r5xb"]
 
 [ext_resource type="Texture2D" uid="uid://caq1fagm18cjs" path="res://icon.svg" id="1_5mcub"]
+[ext_resource type="Script" path="res://main_character.gd" id="1_y5kbh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y5kbh"]
 
@@ -10,6 +11,7 @@
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=707517451]
 position = Vector2(562, 367)
+script = ExtResource("1_y5kbh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1155688684]
 shape = SubResource("RectangleShape2D_y5kbh")

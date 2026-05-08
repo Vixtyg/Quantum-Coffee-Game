@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="Quantum Coffee"
+<<<<<<< HEAD
 run/main_scene="uid://dqk0pcxj7r5xb"
+=======
+run/main_scene="uid://nx8iml8dcij8"
+>>>>>>> 9505445f24b878f6556b84c33ca53fd6ec298998
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
