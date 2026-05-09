@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://dp0q3ymfx2lrq"]
+
+[ext_resource type="Texture2D" uid="uid://b3s328lxc5flt" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Alles.png" id="1_7nhaj"]
+[ext_resource type="Script" uid="uid://djh7rfpql03pq" path="res://paralax_scene.gd" id="1_uo32j"]
+[ext_resource type="Texture2D" uid="uid://biwx21samiq8v" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Hintergrund.png" id="2_1541l"]
+[ext_resource type="Texture2D" uid="uid://bgnnmbprjml0o" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Grünes Ding 3.png" id="3_x1lvj"]
+[ext_resource type="Texture2D" uid="uid://najo162njq4q" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Grünes Ding 2.png" id="4_k0frj"]
+[ext_resource type="Texture2D" uid="uid://chv1qtkm7nt6h" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Treppe 1.png" id="5_uo32j"]
+[ext_resource type="Texture2D" uid="uid://bnigj31nnsfvn" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Treppe 2.png" id="6_t2xlt"]
+[ext_resource type="Texture2D" uid="uid://bsttqddf7x8tb" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Grünes Ding 1.png" id="7_ojysl"]
+[ext_resource type="Texture2D" uid="uid://b1tpjrmcjs5wo" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Gebäude Rechts.png" id="8_73683"]
+[ext_resource type="Texture2D" uid="uid://ckhkfutwe5bgj" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Leuchte Haus.png" id="8_uo32j"]
+[ext_resource type="Texture2D" uid="uid://chfglse6skog" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Boden.png" id="9_x31on"]
+[ext_resource type="Texture2D" uid="uid://csc5or04l8ngv" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Ascii.png" id="10_6pr5m"]
+[ext_resource type="Texture2D" uid="uid://b88pnmftpf1uv" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Hindernis 1.png" id="11_nftha"]
+[ext_resource type="Texture2D" uid="uid://do60wmu2avfck" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Hindernis 2.png" id="12_jr561"]
+[ext_resource type="Texture2D" uid="uid://bjn5xrocg2ws1" path="res://Sprites/SceneSprites/Caffee/Level 0 Bilder/Hindernis 3.png" id="13_1atsh"]
+[ext_resource type="Script" uid="uid://4rhuxtqvl8yg" path="res://to_next.gd" id="13_uo32j"]
+[ext_resource type="PackedScene" uid="uid://dola6r4hhwlx6" path="res://main_char.tscn" id="16_k0frj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojysl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1lvj"]
+size = Vector2(335.90152, 23.970215)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73683"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0frj"]
+size = Vector2(23.064686, 21.697903)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uo32j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2xlt"]
+
+[node name="ParalaxScene" type="Node2D" unique_id=407655041]
+scale = Vector2(0.74727434, 0.74727434)
+script = ExtResource("1_uo32j")
+rightLimit = 8000
+topLimit = -1000
+downLimit = 512
+zoomFactor = 1.0
+
+[node name="Alles" type="Sprite2D" parent="." unique_id=2054418774]
+position = Vector2(4838, -3702)
+texture = ExtResource("1_7nhaj")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1667761110]
+scroll_scale = Vector2(1.29, 1)
+scroll_offset = Vector2(4617, 1)
+
+[node name="GrünesDing1" type="Sprite2D" parent="Parallax2D3" unique_id=279910957]
+z_index = 1
+position = Vector2(-1661, 196)
+texture = ExtResource("7_ojysl")
+
+[node name="GebäudeRechts" type="Sprite2D" parent="Parallax2D3" unique_id=30252338]
+z_index = 1
+position = Vector2(5775, -217)
+texture = ExtResource("8_73683")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Parallax2D3/GebäudeRechts" unique_id=897753410]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parallax2D3/GebäudeRechts/StaticBody2D" unique_id=2077815144]
+scale = Vector2(78.240005, 100.000015)
+shape = SubResource("RectangleShape2D_ojysl")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1240709353]
+scroll_scale = Vector2(0.785, 1)
+scroll_offset = Vector2(3692, 1)
+
+[node name="GrünesDing3" type="Sprite2D" parent="Parallax2D2" unique_id=556542135]
+z_index = -2
+position = Vector2(-1303.5, -16)
+texture = ExtResource("3_x1lvj")
+
+[node name="GrünesDing2" type="Sprite2D" parent="Parallax2D2" unique_id=1586726297]
+z_index = -2
+position = Vector2(1090.5, -141)
+texture = ExtResource("4_k0frj")
+
+[node name="Treppe1" type="Sprite2D" parent="Parallax2D2" unique_id=1997710275]
+z_index = -2
+position = Vector2(-2072.5, -217)
+texture = ExtResource("5_uo32j")
+
+[node name="Treppe2" type="Sprite2D" parent="Parallax2D2" unique_id=1431513118]
+z_index = -2
+position = Vector2(1984.5, -217)
+texture = ExtResource("6_t2xlt")
+
+[node name="LeuchteHaus" type="Sprite2D" parent="Parallax2D2" unique_id=1494323727]
+position = Vector2(-3664, 87)
+texture = ExtResource("8_uo32j")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=201070572]
+scroll_scale = Vector2(0.625, 1)
+scroll_offset = Vector2(3692, 1)
+
+[node name="Hintergrund" type="Sprite2D" parent="Parallax2D" unique_id=1844169636]
+z_index = -3
+position = Vector2(956, -217)
+texture = ExtResource("2_1541l")
+
+[node name="Boden" type="Sprite2D" parent="." unique_id=356547367]
+z_index = -1
+position = Vector2(4804, 721)
+texture = ExtResource("9_x31on")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boden" unique_id=1502183774]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boden/StaticBody2D" unique_id=698542856]
+position = Vector2(-772.4999, 48.3125)
+scale = Vector2(24.33749, 24.33749)
+shape = SubResource("RectangleShape2D_x1lvj")
+
+[node name="Ascii" type="Sprite2D" parent="." unique_id=1527143675]
+z_index = -1
+position = Vector2(7136, -320)
+texture = ExtResource("10_6pr5m")
+
+[node name="Area2D" type="Area2D" parent="Ascii" unique_id=565290259]
+position = Vector2(288, 564)
+script = ExtResource("13_uo32j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ascii/Area2D" unique_id=1623796151]
+scale = Vector2(8.159998, 19.56)
+shape = SubResource("RectangleShape2D_73683")
+
+[node name="Hindernis1" type="Sprite2D" parent="." unique_id=595123317]
+position = Vector2(2625, 449)
+texture = ExtResource("11_nftha")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Hindernis1" unique_id=1725490733]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindernis1/StaticBody2D" unique_id=1178795781]
+position = Vector2(-0.00012207031, -5.950989)
+scale = Vector2(10.925792, 7.0098014)
+shape = SubResource("RectangleShape2D_k0frj")
+
+[node name="Hindernis2" type="Sprite2D" parent="." unique_id=1044546422]
+position = Vector2(3616, 404)
+texture = ExtResource("12_jr561")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Hindernis2" unique_id=774237963]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindernis2/StaticBody2D" unique_id=104625540]
+scale = Vector2(6.400003, 7.52)
+shape = SubResource("RectangleShape2D_uo32j")
+
+[node name="Hindernis3" type="Sprite2D" parent="." unique_id=423348334]
+position = Vector2(4207, 299)
+texture = ExtResource("13_1atsh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Hindernis3" unique_id=488790177]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindernis3/StaticBody2D" unique_id=279120868]
+scale = Vector2(18.240002, 19.119997)
+shape = SubResource("RectangleShape2D_t2xlt")
+
+[node name="MainChar" parent="." unique_id=1607705978 instance=ExtResource("16_k0frj")]
+position = Vector2(1232, -112)
+scale = Vector2(4.9953566, 4.9953566)
+
+[connection signal="body_entered" from="Ascii/Area2D" to="Ascii/Area2D" method="_on_body_entered"]

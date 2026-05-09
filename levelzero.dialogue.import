@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvw62s6jv4aob"
+path="res://.godot/imported/levelzero.dialogue-89b030f2d56367fa29f84cd70d7d3ba0.tres"
+
+[deps]
+
+source_file="res://levelzero.dialogue"
+dest_files=["res://.godot/imported/levelzero.dialogue-89b030f2d56367fa29f84cd70d7d3ba0.tres"]
+
+[params]
+
+defaults=true

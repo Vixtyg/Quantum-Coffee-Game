@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://7ykk1lwoapme"]
+
+[ext_resource type="Texture2D" uid="uid://cixis0tt0nhs5" path="res://assets/BackgroundMother.png" id="1_alv68"]
+[ext_resource type="Script" uid="uid://0n4mqxdldiqc" path="res://motherboard.gd" id="1_ftuw7"]
+[ext_resource type="Resource" uid="uid://1xgyvwosu7ox" path="res://AllInOne.dialogue" id="2_3rh0s"]
+[ext_resource type="PackedScene" uid="uid://dqmcbaa06pak" path="res://Board.tscn" id="2_fjjeb"]
+[ext_resource type="PackedScene" uid="uid://cot4updmd4nx7" path="res://CORE.tscn" id="2_gvh4x"]
+[ext_resource type="PackedScene" uid="uid://cjpfkbgm1kp74" path="res://Capacitor.tscn" id="3_v65m0"]
+[ext_resource type="PackedScene" uid="uid://dola6r4hhwlx6" path="res://main_char.tscn" id="4_alv68"]
+
+[node name="Node2D" type="Node2D" unique_id=86823612]
+script = ExtResource("1_ftuw7")
+my_dialogue = ExtResource("2_3rh0s")
+
+[node name="BackgroundMother" type="Sprite2D" parent="." unique_id=815360207]
+texture_filter = 1
+position = Vector2(3152, 446)
+scale = Vector2(49.375, 49.375)
+texture = ExtResource("1_alv68")
+
+[node name="BackgroundMother" type="Sprite2D" parent="BackgroundMother" unique_id=394263962]
+texture_filter = 1
+position = Vector2(1800, 784)
+scale = Vector2(28.25, 28.25)
+texture = ExtResource("1_alv68")
+
+[node name="CORE" parent="." unique_id=2017776860 instance=ExtResource("2_gvh4x")]
+position = Vector2(216, 1128)
+
+[node name="CORE" parent="CORE" unique_id=1085628936 instance=ExtResource("2_gvh4x")]
+position = Vector2(2088, -32)
+
+[node name="CORE2" parent="CORE" unique_id=1263195090 instance=ExtResource("2_gvh4x")]
+position = Vector2(240, 1152)
+
+[node name="CORE" parent="CORE/CORE2" unique_id=614029725 instance=ExtResource("2_gvh4x")]
+position = Vector2(1072, -1192)
+
+[node name="Node2D" parent="." unique_id=220681811 instance=ExtResource("3_v65m0")]
+position = Vector2(496, 1096)
+
+[node name="MainChar" parent="." unique_id=1607705978 instance=ExtResource("4_alv68")]
+position = Vector2(264, 1000)
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=2010591652]
+
+[node name="Node2D3" parent="." unique_id=2090483821 instance=ExtResource("3_v65m0")]
+position = Vector2(1824, 920)
+
+[node name="Node2D3" parent="Node2D3" unique_id=908712841 instance=ExtResource("3_v65m0")]
+position = Vector2(304, -8)
+
+[node name="Node2D3" parent="Node2D3/Node2D3" unique_id=236768820 instance=ExtResource("3_v65m0")]
+position = Vector2(368, 0)
+
+[node name="Node2D3" parent="Node2D3/Node2D3/Node2D3" unique_id=437365486 instance=ExtResource("3_v65m0")]
+position = Vector2(384, -8)
+
+[node name="Board" parent="." unique_id=353943068 instance=ExtResource("2_fjjeb")]
+position = Vector2(1000, 1016)
+
+[node name="BackgroundMother2" type="Sprite2D" parent="." unique_id=986689032]
+texture_filter = 1
+position = Vector2(89034, 15832.5)
+scale = Vector2(273.53128, 273.53128)
+texture = ExtResource("1_alv68")
+
+[node name="BackgroundMother" type="Sprite2D" parent="BackgroundMother2" unique_id=324662918]
+texture_filter = 1
+position = Vector2(1800, 784)
+scale = Vector2(28.25, 28.25)
+texture = ExtResource("1_alv68")

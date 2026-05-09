@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cybl0h6wheiwy"]
+
+[ext_resource type="Script" uid="uid://bqnfii5s7jbtu" path="res://bullet.gd" id="1_v8qja"]
+[ext_resource type="Texture2D" uid="uid://caq1fagm18cjs" path="res://icon.svg" id="2_t4vbm"]
+
+[node name="Node2D" type="CharacterBody2D" unique_id=769460366]
+script = ExtResource("1_v8qja")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1176430722]
+position = Vector2(0, 2)
+texture = ExtResource("2_t4vbm")

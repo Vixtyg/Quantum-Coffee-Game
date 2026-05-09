@@ -1,13 +1,95 @@
-~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are [rainbow amp=50.0 freq=10.0]some[/rainbow] choices.
-- First one
-	Nathan: You picked the first one.
-	set states_list.some_variable = false
-- Second one
-	set states_list.some_variable = true
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+~ levelzero
+Friday 7pm, APB :
+
+
+Bob: Uhhh, damn. That was a stressfull week. \nI really need to relax for a bit.
+Bob: Maybe, I should get some [wave amp=50.0 freq=10.0]Coffee[/wave].
+Bob: If only there was an easy, well accsessible way to get some...
+....
+Bob: Wait, let's go to ASCII!
+
+- Hell yeah! 
+  Bob: Let's go. => END
+- Nah, I should really go to the SLUB.
+  Bob: Ha, lol. As if I would ever do such a logical thing.
+  Bob: Let's procrastinate even more :> => END
+- Moving is too exhausting T_T
+  Bob: ....
+  hm
+  *whistleling noises*
+  *feet starting to hurt*
+  Bob: Yeah, I should maybe just get the coffee. => END
+
+~ LevelZeroB
+Bob: Huh, nobody's there.
+- I should just go.
+    Bob: But my caffeine levels are shockingly low.
+    Bob: I [wave amp=50.0 freq=10.0]really[/wave] need that shot.
+- No one is watching.
+    Bob: I mean, there is no sign that says to not use it on my own...
+    *grins in a really unpleasent way*
+Bob: Let's not make it abig deal. \nFor all I know, I'm something of a [wave amp=50.0 freq=10.0]BARISTA[/wave] myself!
+*turns the machine on*
+Coffee Machine: Whirrrrr-hiss... \nSCREE—pop
+Bob: Come on, baby. \nJust two shots. \nThat’s all I’m asking for.
+Coffee Machine: Beeeeep booooop.
+Bob: Oh shoot! No cofffeee????
+~ loop
+Coffee Machine: There was an Error! Please choose an option.
+- Run Self-Diagnostic
+	Coffee Machine: progressing... \nNo Error detected! => loop
+- Contact 'Brew-Support'
+	Coffee Machine: It takes 45 minutes.
+	Bob: Noooo! I want my coffee [wave amp=50.0 freq=10.0]NOW[/wave]. => loop
+- Use your incredible fixing skillzz!
+Bob: OK! \nI will do it on my own!!!
+*checks for filter*
+Coffee Machine: beeeep brrrbrbrrr
+*checks water supply*
+Coffee Machine: rerererererer
+Bob: Okay, enough of that! \nLuckily I've bought this shiny new [wave amp=50.0 freq=10.0]Shrinking Gun[/wave] yesterday...
+Bob: I can just go in the machine and fix it finally.
+*pulls out gun and shoots it at his head*
 => END
+
+~ LevelOne
+Bob: It reallly worked! \nI am alive...
+Bob: I didn't think I could trust that shady salesman at the 'Elbeflohmarkt'.
+Bob: Why is it so hot here?
+Strange Noise: Whineeeeeee... \nGriiiii...
+Bob: What was that [tornado freq=0.5]Strange Noise[/tornado]...
+Bob: Let's look for it... 
+=> END!
+
+~ LevelOneB
+Bob: Wow, this was tough. \nThey should clean this junk heap more often!
+CPU: Hrrrrrr...
+Bob: So CPU was the problem...
+Bob: Ninety-two percent... \nstay with me.\n you beautiful piece of silicon. \njust five more minutes.
+Bob: I guess I have to go even deeper.
+*pulls out the gun AGAIN and shoots it at his head*
+=> END
+
+~ LevelTwo
+Bob: Oh! Now I am in the CPU.\nLet's see what's going on here.
+=> END
+
+~ LevelTwoB
+Bob: Uhh, I'm exhausted. Why are they designing CPUs this way?! \nI hate RISC architecture.\nCompletely unrepairable!
+Bob: I guess I have to call it a day here.
+- No, dont give up! Coffeee!
+    Bob: No, I will [wave]NEVER[/wave] give up!
+    Bob: My COFFEE URGE is way too high.\nI don't even know a life without this bitter liquid gold.
+    Bob: However... \nMy back hurts pretty bad.
+    *horrifying cracking sounds are coming from deep inside his spine*
+    Bob: Yup, time to go. Who needs coffee anyways.
+
+- I'm not that crafty after all :(
+    Bob: I mean... \nAt least I've tried it...
+    Bob: There is no shame in giving up.
+    *starts to sob*
+    Bob: [tornado freq=0.5]No SHAME[/tornado]
+
+*pulls out shrinking gun one LAST time and shoot his head*
+=> END
+

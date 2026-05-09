@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://1xgyvwosu7ox"
+path="res://.godot/imported/AllInOne.dialogue-190d68b8fbc90d66ffdfff2ceb990416.tres"
+
+[deps]
+
+source_file="res://AllInOne.dialogue"
+dest_files=["res://.godot/imported/AllInOne.dialogue-190d68b8fbc90d66ffdfff2ceb990416.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://be43vfidtuq2x"]
+
+[ext_resource type="Script" path="res://dust.gd" id="1_hvgcl"]
+[ext_resource type="Texture2D" uid="uid://caq1fagm18cjs" path="res://icon.svg" id="2_p32id"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hwgbj"]
+
+[node name="dust" type="CharacterBody2D" unique_id=260694002]
+script = ExtResource("1_hvgcl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=254137591]
+shape = SubResource("CircleShape2D_hwgbj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1191775999]
+scale = Vector2(0.122369565, 0.11972454)
+texture = ExtResource("2_p32id")

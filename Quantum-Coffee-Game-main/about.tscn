@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cjxbr808eh5ct"]
+
+[ext_resource type="Script" uid="uid://cy2jeyr0x2thm" path="res://about.gd" id="1_4q2eq"]
+
+[node name="About" type="Node2D" unique_id=608450006]
+script = ExtResource("1_4q2eq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1824029823]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1760334043]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -593.0
+offset_top = -345.0
+offset_right = 587.0791
+offset_bottom = 340.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0024753, 1)
+color = Color(0.7294118, 0.6156863, 0.5411765, 1)
+
+[node name="Quantum Coffee" type="Label" parent="." unique_id=136299770]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -598.0
+offset_top = -193.0
+offset_right = 536.0
+offset_bottom = -116.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 56
+text = "QUANTUM COFFEE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quantum Coffee2" type="Label" parent="." unique_id=801407002]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -685.0
+offset_top = -217.0
+offset_right = 598.0
+offset_bottom = 329.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 36
+text = "Lorem Ipsum is simply dummy text of the printing 
+and typesetting industry. Lorem Ipsum has been the 
+industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and 
+scrambled it to make a type specimen book."
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="MenuButton" type="MenuButton" parent="." unique_id=1301419044]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -863.0
+offset_top = -515.0
+offset_right = 887.0
+offset_bottom = 522.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

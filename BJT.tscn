@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://3ptwq0y00btv"]
+
+[ext_resource type="Texture2D" uid="uid://bw6o7a23o7d7c" path="res://BJT.png" id="1_nbvqy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pnp7"]
+size = Vector2(59, 35)
+
+[node name="BJT" type="StaticBody2D" unique_id=1225157681]
+
+[node name="Bjt" type="Sprite2D" parent="." unique_id=1325951668]
+texture_filter = 1
+texture_repeat = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_nbvqy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=972673413]
+position = Vector2(0.5, -8.5)
+shape = SubResource("RectangleShape2D_1pnp7")

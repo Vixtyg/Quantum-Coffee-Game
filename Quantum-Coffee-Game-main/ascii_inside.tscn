@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dmmovcnfab606"]
+
+[ext_resource type="Texture2D" uid="uid://bwu4ctwc6es50" path="res://Sprites/SceneSprites/InsideCaffee/Alles Ascii/Alles.png" id="1_y1amm"]
+[ext_resource type="Script" uid="uid://c4taa7gmpe30n" path="res://coffeemachine.gd" id="2_kvx8l"]
+[ext_resource type="PackedScene" uid="uid://dola6r4hhwlx6" path="res://main_char.tscn" id="3_lcax3"]
+[ext_resource type="Resource" uid="uid://bvw62s6jv4aob" path="res://levelzero.dialogue" id="3_mmcx8"]
+[ext_resource type="Script" uid="uid://d06x2sg3ybg0w" path="res://cam_2d.gd" id="5_6qx5n"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kvx8l"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lcax3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mmcx8"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6qx5n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gb784"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xliah"]
+font_size = 128
+font_color = Color(0.07015244, 0.07015244, 0.070152424, 1)
+
+[node name="AsciiInside" type="Node2D" unique_id=474885353]
+
+[node name="Alles" type="Sprite2D" parent="." unique_id=1962646136]
+position = Vector2(556, 374)
+texture = ExtResource("1_y1amm")
+
+[node name="walls" type="StaticBody2D" parent="." unique_id=1494782504]
+position = Vector2(364, 1045)
+
+[node name="floor" type="CollisionShape2D" parent="walls" unique_id=1846637678]
+shape = SubResource("WorldBoundaryShape2D_kvx8l")
+
+[node name="left" type="CollisionShape2D" parent="walls" unique_id=2051920209]
+position = Vector2(-2307, -573)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_lcax3")
+
+[node name="right" type="CollisionShape2D" parent="walls" unique_id=937144187]
+position = Vector2(2617, -852)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_mmcx8")
+
+[node name="top" type="CollisionShape2D" parent="walls" unique_id=1152493035]
+position = Vector2(108, -2803)
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_6qx5n")
+
+[node name="Coffeemachine" type="Area2D" parent="." unique_id=212947632]
+position = Vector2(1599, 577)
+script = ExtResource("2_kvx8l")
+my_dialogue = ExtResource("3_mmcx8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coffeemachine" unique_id=5999815]
+scale = Vector2(44.457626, 44.457626)
+shape = SubResource("RectangleShape2D_gb784")
+
+[node name="Label" type="Label" parent="Coffeemachine/CollisionShape2D" unique_id=58560526]
+z_index = 9
+offset_left = -19.65917
+offset_top = -21.81853
+offset_right = 20.34083
+offset_bottom = 1.1814709
+scale = Vector2(0.025545895, 0.025545895)
+text = "Press E to brew coffee"
+label_settings = SubResource("LabelSettings_xliah")
+
+[node name="MainChar" parent="." unique_id=1607705978 instance=ExtResource("3_lcax3")]
+position = Vector2(-1214, 521)
+scale = Vector2(14.012668, 14.012668)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2003365860]
+position = Vector2(571, 389)
+scale = Vector2(10.4, 1)
+zoom = Vector2(0.5, 0.5)
+limit_enabled = false
+script = ExtResource("5_6qx5n")
+
+[connection signal="body_entered" from="Coffeemachine" to="Coffeemachine" method="_on_body_entered"]
+[connection signal="body_exited" from="Coffeemachine" to="Coffeemachine" method="_on_body_exited"]

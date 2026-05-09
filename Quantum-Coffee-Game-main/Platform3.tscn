@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c5x1t8ugydwjo"]
+
+[ext_resource type="Texture2D" uid="uid://dubtfywkfqqi1" path="res://assets/Plattform 3.png" id="1_24x1m"]
+
+[node name="Node2D" type="Node2D" unique_id=2141028113]
+
+[node name="Plattform3" type="Sprite2D" parent="." unique_id=226174436]
+position = Vector2(0, 328)
+texture = ExtResource("1_24x1m")

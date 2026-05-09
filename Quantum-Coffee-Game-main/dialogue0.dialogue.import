@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://m1mucabijrcn"
+path="res://.godot/imported/dialogue0.dialogue-4bfd106ac4f43e84ee231c2f5fd93edc.tres"
+
+[deps]
+
+source_file="res://dialogue0.dialogue"
+dest_files=["res://.godot/imported/dialogue0.dialogue-4bfd106ac4f43e84ee231c2f5fd93edc.tres"]
+
+[params]
+
+defaults=true

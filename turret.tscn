@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dfqxrd7lhfh1a"]
+
+[ext_resource type="Script" path="res://turret.gd" id="1_c5apd"]
+[ext_resource type="PackedScene" uid="uid://cxm2mmy25qp4h" path="res://Prefabs/bullet_scene.tscn" id="2_coqkk"]
+[ext_resource type="Texture2D" uid="uid://bisbylldoy5sx" path="res://assets/turrel.png" id="3_2kw7u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_12yb5"]
+
+[node name="turret" type="CharacterBody2D" unique_id=98353498]
+script = ExtResource("1_c5apd")
+range = 400
+bullet = ExtResource("2_coqkk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1552602651]
+scale = Vector2(4.4392796, 4.4392796)
+shape = SubResource("CircleShape2D_12yb5")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1312796045]
+scale = Vector2(1.3522296, 1.3522296)
+texture = ExtResource("3_2kw7u")
