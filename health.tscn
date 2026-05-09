@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bi3bnqntq6fo1"]
+
+[ext_resource type="Script" uid="uid://bu82xp538dthk" path="res://health.gd" id="1_ledv5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ledv5"]
+bg_color = Color(0.7019608, 0.50980395, 0.42352942, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bydfv"]
+bg_color = Color(0.3529412, 0.24313726, 0.1764706, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Health" type="Node2D" unique_id=1160628097]
+script = ExtResource("1_ledv5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2014393365]
+
+[node name="HealthLabel" type="Label" parent="." unique_id=1470148013]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -464.5
+offset_top = -307.0
+offset_right = -394.5
+offset_bottom = -284.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Health: 5"
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=23491558]
+offset_left = -567.0
+offset_top = -309.0
+offset_right = -292.0
+offset_bottom = -282.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ledv5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bydfv")
+max_value = 5.0
+step = 1.0
+value = 4.0
+show_percentage = false

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bwm5l76ulhat"]
+
+[node name="Dialogue" type="Node2D" unique_id=656156380]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1200767544]
+zoom = Vector2(2.5, 2.5)
+
+[node name="DialogueBox" type="ColorRect" parent="." unique_id=102412361]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.0
+offset_top = 35.0
+offset_right = 204.02222
+offset_bottom = 139.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0024753, 1)
+color = Color(0.7294118, 0.6156863, 0.5411765, 1)
+
+[node name="Quantum Coffee" type="Label" parent="DialogueBox" unique_id=1561617548]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -541.65924
+offset_top = 19.0
+offset_right = 592.34076
+offset_bottom = 96.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 56
+text = "texttexttexttexttext
+texttexttexttexttext
+texttexttexttexttext"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="." unique_id=1603597650]
+oversampling_override = 1.0
+mode = 3
+position = Vector2i(0, 36)
+visible = true
+ok_button_text = "ok"
