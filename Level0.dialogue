@@ -1,0 +1,23 @@
+~ start
+Friday 7pm, APB :
+
+
+Bob: Uhhh, damn. That was a stressfull week. \nI really need to relax for a bit.
+Bob: Maybe, I should get some [wave amp=50.0 freq=10.0]Coffee[/wave].
+Bob: If only there was an easy, well accsessible way to get some...
+....
+Bob: Wait, let's go to ASCII!
+
+- Hell yeah! 
+  Bob: Let's go. => END
+- Nah, I should really go to the SLUB.
+  Bob: Ha, lol. As if I would ever do such a logical thing.
+  Bob: Let's procrastinate even more :> => END
+- Moving is too exhausting T_T
+  Bob: ....
+  hm
+  *whistleling noises*
+  *feet starting to hurt*
+  Bob: Yeah, I should maybe just get the coffee. => END
+
+=> END

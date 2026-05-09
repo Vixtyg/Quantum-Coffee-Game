@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://nb4k2ake7ok7"]
 
 [ext_resource type="Script" uid="uid://8y6l81cma25l" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://dse1yp36ocsfu" path="res://main_menu_background.png" id="2_0e48y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtcfe"]
 bg_color = Color(0.3529412, 0.24313726, 0.1764706, 1)
@@ -102,37 +103,15 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="MainMenu/MainMenu" unique_id=1614087647]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -582.00006
-offset_top = -332.0
-offset_right = 616.0346
-offset_bottom = 348.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.0024753, 1)
-color = Color(0.7294118, 0.6156863, 0.5411765, 1)
-
-[node name="Quantum Coffee" type="Label" parent="MainMenu/MainMenu" unique_id=948979944]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -598.0
-offset_top = -193.0
-offset_right = 536.0
-offset_bottom = -116.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
-theme_override_font_sizes/font_size = 56
-text = "QUANTUM COFFEE"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="TextureRect" type="TextureRect" parent="MainMenu/MainMenu" unique_id=1183519798]
+z_index = -1
+layout_mode = 0
+offset_left = -463.0
+offset_top = -285.0
+offset_right = 423.0
+offset_bottom = 193.0
+texture = ExtResource("2_0e48y")
+expand_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/MainMenu" unique_id=1615467301]
 layout_mode = 1

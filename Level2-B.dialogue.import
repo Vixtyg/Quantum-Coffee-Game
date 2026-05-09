@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://byqfrqxjk4urd"
+path="res://.godot/imported/Level2-B.dialogue-5ff568bbee69e684d02be3012706ff8e.tres"
+
+[deps]
+
+source_file="res://Level2-B.dialogue"
+dest_files=["res://.godot/imported/Level2-B.dialogue-5ff568bbee69e684d02be3012706ff8e.tres"]
+
+[params]
+
+defaults=true

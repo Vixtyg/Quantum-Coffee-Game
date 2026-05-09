@@ -1,0 +1,27 @@
+~ start
+Bob: I'm back...\nBut still no coffee...
+Bob: T-T
+- Go home.
+    Bob: It was too good to be true...\n I damn this shady Elbeflohmarkt Salesman.
+    Bob: His sorcery only made me feel this lingering sense of victory a bit longer.
+    *feels defeated and leaves this unholy place*
+- Sit down to do homework :<
+    Bob: I mean...even if there is no coffee...\nThere is still a lot of work to do.
+    *starts his mondane 'Technische Grundlagen' homework*
+    Bob: Wow...I've read like two sentences and already want to shoot my head again.
+    Bob: [wave]but not with the shrinking gun[/wave]
+    *proceeds to suffer*
+    Bob: Ahhh, this stuff is so hard!
+    Horrible Homework: What is the main purpose of the grounding pin in a power outlet?
+    - To raise voltage. 
+		Bob: Hm, I hope this is correct. I REALLY need that 1.0 score. => END
+	- To prevent electric shock.
+        Bob: That seems logical...
+        *rises his head up with a smile*
+        Bob: Wait! The power outlet!
+        *turns the coffee machine off and on*
+        Bob: Omg! [wave amp=100.0 freq=20.0]COFFEE[/wave]
+        Bob: Now I can die peacefully! => END
+    - To charge faster.
+    	Bob: Hm, I hope this is correct. I REALLY need that 1.0 score. => END
+=> END

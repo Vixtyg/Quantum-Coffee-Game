@@ -1,0 +1,31 @@
+~ start
+Bob: Huh, nobody's there.
+- I should just go.
+    Bob: But my caffeine levels are shockingly low.
+    Bob: I [wave amp=50.0 freq=10.0]really[/wave] need that shot.
+- No one is watching.
+    Bob: I mean, there is no sign that says to not use it on my own...
+    *grins in a really unpleasent way*
+Bob: Let's not make it abig deal. \nFor all I know, I'm something of a [wave amp=50.0 freq=10.0]BARISTA[/wave] myself!
+*turns the machine on*
+Coffee Machine: Whirrrrr-hiss... \nSCREE—pop
+Bob: Come on, baby. \nJust two shots. \nThat’s all I’m asking for.
+Coffee Machine: Beeeeep booooop.
+Bob: Oh shoot! No cofffeee????
+~ loop
+Coffee Machine: There was an Error! Please choose an option.
+- Run Self-Diagnostic
+	Coffee Machine: progressing... \nNo Error detected! => loop
+- Contact 'Brew-Support'
+	Coffee Machine: It takes 45 minutes.
+	Bob: Noooo! I want my coffee [wave amp=50.0 freq=10.0]NOW[/wave]. => loop
+- Use your incredible fixing skillzz!
+Bob: OK! \nI will do it on my own!!!
+*checks for filter*
+Coffee Machine: beeeep brrrbrbrrr
+*checks water supply*
+Coffee Machine: rerererererer
+Bob: Okay, enough of that! \nLuckily I've bought this shiny new [wave amp=50.0 freq=10.0]Shrinking Gun[/wave] yesterday...
+Bob: I can just go in the machine and fix it finally.
+*pulls out gun and shoots it at his head*
+=> END
