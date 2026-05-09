@@ -86,6 +86,7 @@ func _physics_process(delta: float) -> void:
 		scale-=Vector2(0.1,0.1)
 		$Camera2D.zoom.x*=1.2
 		$Camera2D.zoom.y*=1.2
+		$Camera2D.set_lims(-10000,-10000,-10000,-10000)
 		
 	if position.y>maxHeight:
 		print("Die")

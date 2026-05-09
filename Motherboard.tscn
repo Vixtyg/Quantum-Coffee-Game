@@ -17,8 +17,8 @@ script = ExtResource("1_0tdyu")
 
 [node name="BackgroundMother3" type="Sprite2D" parent="." unique_id=1059370682]
 texture_filter = 1
-position = Vector2(146160.02, 30936)
-scale = Vector2(2437.8906, 2437.8906)
+position = Vector2(1920, 768)
+scale = Vector2(47.677113, 47.09071)
 texture = ExtResource("1_alv68")
 
 [node name="BackgroundMother" type="Sprite2D" parent="BackgroundMother3" unique_id=1058164276]
@@ -34,6 +34,17 @@ scale = Vector2(49.375, 49.375)
 texture = ExtResource("1_alv68")
 
 [node name="BackgroundMother" type="Sprite2D" parent="BackgroundMother" unique_id=394263962]
+texture_filter = 1
+position = Vector2(1800, 784)
+scale = Vector2(28.25, 28.25)
+texture = ExtResource("1_alv68")
+
+[node name="BackgroundMother2" type="Sprite2D" parent="BackgroundMother" unique_id=331104519]
+texture_filter = 1
+position = Vector2(3152, 446)
+texture = ExtResource("1_alv68")
+
+[node name="BackgroundMother" type="Sprite2D" parent="BackgroundMother/BackgroundMother2" unique_id=1104800641]
 texture_filter = 1
 position = Vector2(1800, 784)
 scale = Vector2(28.25, 28.25)
@@ -68,7 +79,7 @@ position = Vector2(1072, -1192)
 position = Vector2(496, 1096)
 
 [node name="MainChar" parent="." unique_id=1607705978 instance=ExtResource("4_alv68")]
-position = Vector2(184, 952)
+position = Vector2(3320, 592)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1720405656]
 
@@ -115,15 +126,16 @@ debug_color = Color(0.9840575, 0, 0.3516213, 0.41960785)
 position = Vector2(4568, 376)
 
 [node name="Label" type="Label" parent="." unique_id=1141209804]
-offset_left = 160.0
-offset_top = 865.0
-offset_right = 936.0
-offset_bottom = 992.0
+offset_left = 136.0
+offset_top = 808.0
+offset_right = 912.0
+offset_bottom = 935.0
 pivot_offset = Vector2(-168, 375)
 text = "The CORE gives you a 
 SUPERCHARGE!
 
 Stomp on them using
 CTRL to BOUNCE"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Shrinker" to="MainChar" method="_on_shrinker_body_entered"]
