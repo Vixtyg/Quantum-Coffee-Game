@@ -1,16 +1,31 @@
 [gd_scene format=3 uid="uid://7ykk1lwoapme"]
 
+[ext_resource type="Script" uid="uid://0n4mqxdldiqc" path="res://motherboard.gd" id="1_0tdyu"]
 [ext_resource type="Texture2D" uid="uid://cixis0tt0nhs5" path="res://assets/BackgroundMother.png" id="1_alv68"]
 [ext_resource type="PackedScene" uid="uid://dqmcbaa06pak" path="res://Board.tscn" id="2_fjjeb"]
 [ext_resource type="PackedScene" uid="uid://cot4updmd4nx7" path="res://CORE.tscn" id="2_gvh4x"]
 [ext_resource type="PackedScene" uid="uid://cjpfkbgm1kp74" path="res://Capacitor.tscn" id="3_v65m0"]
 [ext_resource type="PackedScene" uid="uid://dola6r4hhwlx6" path="res://main_char.tscn" id="4_alv68"]
 [ext_resource type="Script" uid="uid://s4fu5qi465cl" path="res://shrinker.gd" id="6_ftuw7"]
+[ext_resource type="PackedScene" uid="uid://3ptwq0y00btv" path="res://BJT.tscn" id="7_3rh0s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rh0s"]
 size = Vector2(232.5, 16.5)
 
 [node name="Node2D" type="Node2D" unique_id=86823612]
+script = ExtResource("1_0tdyu")
+
+[node name="BackgroundMother3" type="Sprite2D" parent="." unique_id=1059370682]
+texture_filter = 1
+position = Vector2(146160.02, 30936)
+scale = Vector2(2437.8906, 2437.8906)
+texture = ExtResource("1_alv68")
+
+[node name="BackgroundMother" type="Sprite2D" parent="BackgroundMother3" unique_id=1058164276]
+texture_filter = 1
+position = Vector2(1800, 784)
+scale = Vector2(28.25, 28.25)
+texture = ExtResource("1_alv68")
 
 [node name="BackgroundMother" type="Sprite2D" parent="." unique_id=815360207]
 texture_filter = 1
@@ -53,7 +68,7 @@ position = Vector2(1072, -1192)
 position = Vector2(496, 1096)
 
 [node name="MainChar" parent="." unique_id=1607705978 instance=ExtResource("4_alv68")]
-position = Vector2(2848, 688)
+position = Vector2(184, 952)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1720405656]
 
@@ -95,5 +110,20 @@ script = ExtResource("6_ftuw7")
 position = Vector2(3372.25, 832.25)
 shape = SubResource("RectangleShape2D_3rh0s")
 debug_color = Color(0.9840575, 0, 0.3516213, 0.41960785)
+
+[node name="BJT" parent="." unique_id=1225157681 instance=ExtResource("7_3rh0s")]
+position = Vector2(4568, 376)
+
+[node name="Label" type="Label" parent="." unique_id=1141209804]
+offset_left = 160.0
+offset_top = 865.0
+offset_right = 936.0
+offset_bottom = 992.0
+pivot_offset = Vector2(-168, 375)
+text = "The CORE gives you a 
+SUPERCHARGE!
+
+Stomp on them using
+CTRL to BOUNCE"
 
 [connection signal="body_entered" from="Shrinker" to="MainChar" method="_on_shrinker_body_entered"]
