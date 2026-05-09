@@ -5,6 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://cot4updmd4nx7" path="res://CORE.tscn" id="2_gvh4x"]
 [ext_resource type="PackedScene" uid="uid://cjpfkbgm1kp74" path="res://Capacitor.tscn" id="3_v65m0"]
 [ext_resource type="PackedScene" uid="uid://dola6r4hhwlx6" path="res://main_char.tscn" id="4_alv68"]
+[ext_resource type="Script" uid="uid://s4fu5qi465cl" path="res://shrinker.gd" id="6_ftuw7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rh0s"]
+size = Vector2(232.5, 16.5)
 
 [node name="Node2D" type="Node2D" unique_id=86823612]
 
@@ -24,7 +28,20 @@ texture = ExtResource("1_alv68")
 position = Vector2(216, 1128)
 
 [node name="CORE" parent="CORE" unique_id=1085628936 instance=ExtResource("2_gvh4x")]
-position = Vector2(2088, -32)
+position = Vector2(2112, -56)
+
+[node name="CORE" parent="CORE/CORE" unique_id=1053694214 instance=ExtResource("2_gvh4x")]
+position = Vector2(1104, -176)
+
+[node name="CORE" parent="CORE/CORE/CORE" unique_id=263959326 instance=ExtResource("2_gvh4x")]
+position = Vector2(416, -144)
+rotation = 0.17342898
+
+[node name="CORE" parent="CORE/CORE/CORE/CORE" unique_id=1093401558 instance=ExtResource("2_gvh4x")]
+position = Vector2(456, -216)
+
+[node name="CORE2" parent="CORE/CORE" unique_id=1095738044 instance=ExtResource("2_gvh4x")]
+position = Vector2(984, -176)
 
 [node name="CORE2" parent="CORE" unique_id=1263195090 instance=ExtResource("2_gvh4x")]
 position = Vector2(240, 1152)
@@ -36,7 +53,7 @@ position = Vector2(1072, -1192)
 position = Vector2(496, 1096)
 
 [node name="MainChar" parent="." unique_id=1607705978 instance=ExtResource("4_alv68")]
-position = Vector2(264, 1000)
+position = Vector2(2848, 688)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1720405656]
 
@@ -70,3 +87,13 @@ texture_filter = 1
 position = Vector2(1800, 784)
 scale = Vector2(28.25, 28.25)
 texture = ExtResource("1_alv68")
+
+[node name="Shrinker" type="Area2D" parent="." unique_id=375450189]
+script = ExtResource("6_ftuw7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shrinker" unique_id=1664078201]
+position = Vector2(3372.25, 832.25)
+shape = SubResource("RectangleShape2D_3rh0s")
+debug_color = Color(0.9840575, 0, 0.3516213, 0.41960785)
+
+[connection signal="body_entered" from="Shrinker" to="MainChar" method="_on_shrinker_body_entered"]
